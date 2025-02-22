@@ -1,0 +1,272 @@
+
+$bezier: cubic-bezier(.21, .98, .6, .99);
+
+.frame {
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    background-color: #42a7a1;
+    color: white;
+    font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    border-radius: 2px;
+    background-color: white;
+    height: 200px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.header {
+    background-color: #f1ba64;
+    padding: 10px;
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+            display: inline-block;
+        }
+    }
+
+}
+
+.chart {
+    padding: 10px 10px;
+    height: 100%;
+    position: relative;
+
+    .types {
+        position: relative;
+        height: 30px;
+        display: flex;
+        justify-content: flex-end;
+
+        span {
+            display: inline-block;
+            font-size: 9px;
+            color: #606060;
+
+            &:first-child {
+                margin-right: 30px;
+            }
+        }
+
+        .red::after,
+        .blue::after {
+            content: "";
+            position: absolute;
+            width: 12px;
+            height: 3px;
+            border-radius: 3px;
+            left: 170px;
+            top: 4px;
+            background-color: rgba(245, 62, 62, 0.481);
+        }
+
+        .blue::after {
+            background-color: rgba(99, 99, 228, 0.608);
+            left: 225px;
+        }
+
+    }
+
+    .lines {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 70px;
+
+        div {
+            width: 100%;
+            height: 1px;
+            border-radius: 3px;
+            background-color: rgba(217, 212, 212, 0.481);
+        }
+    }
+
+    .polyline {
+        position: absolute;
+        top: 30px;
+    }
+
+    .days {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        .day {
+            font-size: 9px;
+            color: rgb(152, 149, 149);
+        }
+    }
+
+    .pr {
+        .p1 {
+            top: -37px;
+            left: 5px;
+        }
+
+        .p2 {
+            top: -71px;
+            left: 47px;
+        }
+
+        .p3 {
+            top: -61px;
+            left: 87px;
+        }
+
+        .p4 {
+            top: -72px;
+            left: 127px;
+        }
+
+        .p5 {
+            top: -47px;
+            left: 164px;
+        }
+
+        .p6 {
+            top: -36px;
+            left: 207px;
+        }
+
+        .p7 {
+            top: -64px;
+            left: 247px;
+        }
+
+    }
+
+    .pb {
+        .p1 {
+            top: -23px;
+            left: 5px;
+        }
+
+        .p2 {
+            top: -33px;
+            left: 47px;
+        }
+
+        .p3 {
+            top: -20px;
+            left: 87px;
+        }
+
+        .p4 {
+            top: -28px;
+            left: 127px;
+        }
+
+        .p5 {
+            top: -23px;
+            left: 164px;
+        }
+
+        .p6 {
+            top: -11px;
+            left: 207px;
+        }
+
+        .p7 {
+            top: -19px;
+            left: 247px;
+        }
+
+    }
+
+    .points {
+        position: absolute;
+        z-index: 10;
+
+        .pointR,
+        .pointB {
+            position: relative;
+            cursor: pointer;
+
+            .toolTip {
+                opacity: 0;
+                position: absolute;
+                background-color: rgba(245, 62, 62);
+                color: white;
+                font-size: 12px;
+                padding: 4px;
+                border-radius: 3px;
+                font-weight: lighter;
+                top: 0px;
+                left: -8px;
+                transition: top 300ms, opacity 300ms;
+
+                &:after {
+                    position: absolute;
+                    content: '';
+                    top: 19px;
+                    left: 9px;
+                    border-radius: 3px;
+                    clip-path: polygon(100% 0, 0 0, 50% 100%);
+                    background-color: rgba(245, 62, 62);
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+
+
+            &:hover {
+                .toolTip {
+                    top: -35px;
+                    opacity: 1;
+                }
+            }
+
+
+        }
+
+        .pointR::after,
+        .pointB::after {
+            position: absolute;
+            border-radius: 50%;
+            width: 8px;
+            height: 8px;
+            background-color: rgba(245, 62, 62);
+            content: '';
+        }
+
+        .pointB {
+            .toolTip {
+                background-color: rgba(99, 99, 228);
+
+                &:after {
+                    background-color: rgba(99, 99, 228);
+                }
+            }
+
+            &:after {
+                background-color: rgba(99, 99, 228);
+            }
+        }
+    }
+}
+
+.big {
+    font-size: 14px;
+}
+
+.title,
+.big {
+    font-weight: 600;
+}
+
+.small {
+    font-size: 12px;
+}

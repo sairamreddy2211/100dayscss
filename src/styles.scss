@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap');
+@import "tailwindcss";
+
+.frame {
+    width: 400px;
+    height: 400px;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+    background-color: #fff;
+    font-family: "Courier New", "Courier", sans-serif;
+    background-image: linear-gradient(to bottom left,#4ec3c9,
+    #443ca0);
+    color: white;
+}
+
+.center{ 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+.frameplay {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 5px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    background-color: #264057;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    color: #666666;
+    overflow: hidden;
+
+}

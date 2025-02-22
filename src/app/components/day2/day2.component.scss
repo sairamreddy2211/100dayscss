@@ -1,0 +1,50 @@
+.frame {
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    background: #3faf82;
+    font-family: "Courier New", "Courier", sans-serif;
+    color: white;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &:hover {
+        .line {
+            transition: top 200ms ease-in, rotate 200ms ease-in 300ms, opacity 200ms ease-in;
+        }
+
+        .top {
+            top: 24px;
+            rotate: 45deg;
+        }
+
+        .bottom {
+            rotate: 135deg;
+            top: -23px;
+        }
+
+        .middle {
+            opacity: 0;
+        }
+
+    }
+
+    .line {
+        width: 90px;
+        height: 9px;
+        margin-bottom: 15px;
+        box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3);
+        background-color: white;
+        border-radius: 3px;
+        position: relative;
+        top: 0;
+        transition: top 200ms ease-in 300ms, rotate 200ms ease-in, opacity 200ms ease-in 300ms;
+        transform-origin: center;
+    }
+
+
+}
