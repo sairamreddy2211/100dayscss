@@ -17,19 +17,19 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: '18.x'  # Specify Node version for Angular
+          node-version: '18.x'
 
       - name: Install dependencies
         run: npm install
 
       - name: Build project
-        run: npm run build -- --base-href=/100dayscss/  # Angular specific build command
+        run: npm run build -- --base-href=/100dayscss/
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v4
         with:
           name: production-files
-          path: ./dist/100dayscss  # Angular builds to dist/project-name by default
+          path: ./dist/100dayscss/browser  # Changed to include browser folder contents
 
   deploy:
     name: Deploy
