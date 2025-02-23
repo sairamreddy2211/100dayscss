@@ -73,7 +73,7 @@
 
     .drop_#{$i} {
         position: absolute;
-        width: (12-((50 - $i)/10))+px;
+        width: (12-((50 - $i)/10) - 5)+px;
         height: (12-((50 - $i)/10))+px;
         border-radius: 50px;
         
@@ -89,12 +89,19 @@
     @keyframes dropping_#{$i} {
         0%{
             top: -20px;
+            width: (12-((50 - $i)/10) - 5)+px;
+        }
+
+        70%{
+            width: (12-((50 - $i)/10) - 5)+px;
         }
     
         100% {
             top: 100%;
             left: ($randomleft - 50)+px;
+            width: (12-((50 - $i)/10)+5)+px;
         }
+
     }
 }
 @keyframes rise {
