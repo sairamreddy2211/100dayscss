@@ -11,7 +11,7 @@ export class PlayComponent {
   drops:any = []
 
   ngOnInit(){ 
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 50; i++) {
       this.drops.push(1)
     }
   }
