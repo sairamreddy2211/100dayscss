@@ -1,0 +1,62 @@
+.frame  {
+    background:  #e2caac;
+}
+
+.shoe{ 
+    position: absolute;
+    top: 28%;
+    left:30%;
+    transform-origin: 50% -60%;
+}
+
+.left{ 
+    animation: rotate1 2s ease-in-out 0s infinite;
+}
+
+.right{ 
+    animation: rotate2 2s ease-in-out 0s infinite;
+}
+
+@keyframes rotate1 {
+    from{ 
+        transform: rotate(30deg);
+        top:28%
+    }
+
+    25%{
+        top: 20%;
+    }
+
+    45%{ 
+        top: 29%;
+    }
+
+    50%{ 
+        transform: rotate(-30deg);
+    }
+
+    to{ 
+        transform: rotate(30deg);
+    }
+}
+
+@keyframes rotate2 {
+    from{ 
+        transform: rotate(-30deg);
+    }
+
+    50%{ 
+        transform: rotate(30deg);
+    }
+    
+    75%{
+        top: 20%;
+    }
+    95%{ 
+        top: 29%;
+    }
+    to{ 
+        transform: rotate(-30deg);
+        top:28%
+    }
+}
