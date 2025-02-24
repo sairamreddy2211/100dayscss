@@ -13,6 +13,7 @@ import { Day8Component } from './components/day8/day8.component';
 import { PlayComponent } from './components/play/play.component';
 import { Day9Component } from './components/day9/day9.component';
 import { CommonModule } from '@angular/common';
+import { Day10Component } from './components/day10/day10.component';
 
 @Component({
   selector: 'app-root',
@@ -28,7 +29,8 @@ import { CommonModule } from '@angular/common';
     Day6Component, 
     Day7Component, 
     Day8Component,
-    Day9Component
+    Day9Component,
+    Day10Component,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

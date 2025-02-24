@@ -2,12 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-play',
+  selector: 'app-day10',
   imports: [CommonModule],
-  templateUrl: './play.component.html',
-  styleUrl: './play.component.scss'
+  templateUrl: './day10.component.html',
+  styleUrl: './day10.component.scss'
 })
-export class PlayComponent {
+export class Day10Component {
   dateFormat = '';
   timeFormat = '';
 
