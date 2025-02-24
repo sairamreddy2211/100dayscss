@@ -1,22 +1,27 @@
 <div class="frameplay overflow-hidden">
-    <div class="absolute rounded-[50%] w-[70px] h-[70px] bg-[#f5ecbc] left-[40px] top-[40px] moon">
-        <div class="absolute rounded-[50%] w-[10px] h-[10px] bg-[#ede0a8] left-[40px] top-[40px]"></div>
-        <div class="absolute rounded-[50%] w-[5px] h-[5px] bg-[#ede0a8] left-[10px] top-[40px]"></div>
-        <div class="absolute rounded-[50%] w-[10px] h-[10px] bg-[#ede0a8] left-[30px] top-[10px]"></div>
-        <div class="absolute rounded-[50%] w-[10px] h-[10px] bg-[#ede0a8] left-[30px] top-[50px]"></div>
-        <div class="absolute rounded-[50%] w-[10px] h-[10px] bg-[#ede0a8] left-[50px] top-[17px]"></div>
-        <div class="absolute rounded-[50%] w-[15px] h-[15px] bg-[#ede0a8] left-[10px] top-[25px]"></div>
-    </div>
+    <div
+        class="top-[100px] left-[100px] absolute w-[210px] h-[210px] bg-[#242424] rounded-[50%] border-(#3a3a3a) border-[6px] p-1">
+        <div class="w-full h-full rounded-[50%] border-[#d7605d] border-[3px] p-1">
+            <div class="w-full h-full rounded-[50%] border-[#fff] flex relative justify-center flex-col items-center">
+            <p class="text-[#fff] text-[12px] font-light">
+                {{dateFormat}}
+            </p>
+            <p>
 
-    <div class="back_land">
-        <div class="land1"></div>
-        <div class="land2"></div>
-    </div>
-    <div class="front_land">
-        <div class="land3"></div>
-        <div class="land4"></div>
-        <div class="land5"></div>
-    </div>
+            <p class="text-[#fff] text-[37px]/[1.1] font-bold">
+            {{timeFormat}}
+            </p>
+            <div class="flex justify-between w-[90px]">
 
-    <div *ngFor="let item of drops;let i=index" [class]="'drop_'+i"></div>
+            <p class="text-[#fff] text-[10px]/[2]">
+               <span style="color: red;">❤</span>  81
+            </p>
+            <p class="text-[#fff] text-[10px]/[2]">
+                1248KCAL
+            </p>
+        </div>
+
+        </div>
+    </div>
+</div>
 </div>
