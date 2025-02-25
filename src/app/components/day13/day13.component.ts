@@ -2,13 +2,14 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faClose, faComments, faHeartCrack, faPhoneAlt, faSquarePhoneFlip } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
-  selector: 'app-play',
+  selector: 'app-day13',
   imports: [CommonModule,FontAwesomeModule],
-  templateUrl: './play.component.html',
-  styleUrl: './play.component.scss'
+  templateUrl: './day13.component.html',
+  styleUrl: './day13.component.scss'
 })
-export class PlayComponent {
+export class Day13Component {
   dateFormat = '';
   timeFormat = '';
   faPhoneSquareAlt = faPhoneAlt;

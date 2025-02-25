@@ -16,6 +16,7 @@ import { CommonModule } from '@angular/common';
 import { Day10Component } from './components/day10/day10.component';
 import { Day11Component } from './components/day11/day11.component';
 import { Day12Component } from './components/day12/day12.component';
+import { Day13Component } from './components/day13/day13.component';
 
 @Component({
   selector: 'app-root',
@@ -35,6 +36,7 @@ import { Day12Component } from './components/day12/day12.component';
     Day10Component,
     Day11Component,
     Day12Component,
+    Day13Component,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
