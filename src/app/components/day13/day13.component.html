@@ -1,10 +1,25 @@
 <div class="frame overflow-hidden relative">
     <div class="flex w-full h-full flex flex-wrap holder">
-        <img #imageElement  (click)="isOpen = !isOpen;url = imageElement.src" src="https://static.vecteezy.com/system/resources/previews/022/026/298/non_2x/cute-captain-america-marvel-free-vector.jpg"
-            alt="">
-        <img #imageElement1 (click)="isOpen = !isOpen;url = imageElement1.src" src="https://images.playground.com/5f4d92e5-ef85-44f0-b8a4-c4ab5a79ed3d.jpeg" alt="">
-        <img #imageElement2 (click)="isOpen = !isOpen;url = imageElement2.src" src="https://www.shutterstock.com/image-vector/july-7-2023-full-body-600nw-2329083689.jpg" alt="">
-        <img #imageElement3 (click)="isOpen = !isOpen;url = imageElement3.src" src="https://freedesignfile.com/image/preview/16899/iron-man-avengers-cartoon-clipart.png" alt="">
+        <div class="img">
+            <img #imageElement
+                src="https://static.vecteezy.com/system/resources/previews/022/026/298/non_2x/cute-captain-america-marvel-free-vector.jpg"
+                alt="">
+            <div class="overlay" (click)="isOpen = !isOpen;url = imageElement.src"></div>
+        </div>
+        <div class="img">
+            <img #imageElement1 src="https://images.playground.com/5f4d92e5-ef85-44f0-b8a4-c4ab5a79ed3d.jpeg" alt="">
+            <div class="overlay" (click)="isOpen = !isOpen;url = imageElement1.src"></div>
+        </div>
+        <div class="img">
+            <img #imageElement2
+                src="https://www.shutterstock.com/image-vector/july-7-2023-full-body-600nw-2329083689.jpg" alt="">
+            <div class="overlay" (click)="isOpen = !isOpen;url = imageElement2.src"></div>
+        </div>
+        <div class="img">
+            <img #imageElement3
+                src="https://freedesignfile.com/image/preview/16899/iron-man-avengers-cartoon-clipart.png" alt="">
+            <div class="overlay" (click)="isOpen = !isOpen;url = imageElement3.src"></div>
+        </div>
     </div>
     <div [class]="'profileimg ' + (isOpen ? 'profileani' : '') ">
         <img [src]="url" alt="" srcset="">
@@ -12,7 +27,7 @@
     <div [class]="'upperflap ' + (isOpen ? 'upperani' : '' )"></div>
     <div [class]="'lowerflap ' + (isOpen ? 'lowerani' : '') ">
         <p class="text-white relative top-[65px] left-[41.5%]">Iron Man</p>
-        <div class="flex justify-center items-center relative top-[80px] gap-[40px]" >
+        <div class="flex justify-center items-center relative top-[80px] gap-[40px]">
             <div class="action">
                 <fa-icon [icon]="faPhoneSquareAlt"></fa-icon>
             </div>
