@@ -3,13 +3,12 @@
 }
 
 .holder {
-    gap: 1px;
     justify-content: space-around;
     align-items: center;
-
+    padding: 1px;
 
     .img {
-        max-width: 49%;
+        max-width: 50%;
         border-radius: 2px;
         position: relative;
         overflow: hidden;
