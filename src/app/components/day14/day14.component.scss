@@ -1,0 +1,125 @@
+.frame {
+    background: #494842;
+
+    .maincontent {
+        position: absolute;
+        width: 80%;
+        height: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        perspective: 800px;
+        &:hover .flip {
+            transform: rotateX(180deg) translate3d(0,0,0);
+            box-shadow: 8px -10px 15px 0 rgba(0,0,0,0.5);
+        }
+        .flip {
+            width: 100%;
+            transform-style: preserve-3d;
+            height: 100%;
+            transition: all 1s ease-in-out;
+            box-shadow: 8px 10px 15px 0 rgba(0, 0, 0, 0.5);
+           
+            .front,
+            .back {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: #FFCE4E;
+                border-radius: 3px;
+                overflow: hidden;
+                text-align: center;
+                backface-visibility: hidden;
+            }
+
+            .front {
+                z-index: 2;
+                transform: rotateX(0);
+                img {
+                    position: relative;
+                    top: 52px;
+                    left: 50px;
+                    transform-origin: 50% 100%;
+                    animation: bike 1s linear 0s infinite;
+                }
+
+                .strips{ 
+                    display: flex;
+                    gap: 10px;
+                    position: absolute;
+                    top: 128px;
+                    left: 50px;
+                    width: 180px;
+                    overflow: hidden;
+                    @for $i from 1 through 15 {
+                        .strip_#{$i} {
+                          width: random(20) + px;
+                          flex-shrink: 0;
+                          height: 3px;
+                          position: relative;
+                          background-color: #4d4642;
+                          border-radius: 10px;
+                          animation: strips (0.8 + random(2) / 10) + s linear (random(10) / 10) + s infinite;
+                        }
+                      }
+                }
+            }
+
+            .back {
+                transform: rotateX(180deg);
+
+                img {
+                    position: relative;
+                    z-index: 1;
+                    left: 50px;
+                    top: 80px;
+                    animation: helicopter 1.5s ease-in-out infinite;
+                    // animation-fill-mode: both;
+                }
+            }
+        }
+
+
+
+    }
+
+}
+
+@keyframes strips {
+	0% {
+		transform: translate3d(0, 0, 0) scaleX(1);
+	}
+	100% {
+		transform: translate3d(-210px,0,0) scaleX(.9);
+	}
+}
+
+@keyframes bike {
+    0%{
+        transform: scaleY(1) translateX(0);
+    }
+    50%{ 
+        transform: scaleY(1.05) translate(50px);
+    }
+    100%{
+        transform: scaleY(1) translate(0);
+    }
+}
+
+@keyframes helicopter {
+    0%{
+        transform: translate(50px,0);
+    }
+    45%{ 
+        transform: translate(47px,10px);
+    }
+    75%{
+        transform: translate(53px,10px);
+    }
+    100%{
+        transform: translate(50px,0);
+    }
+    
+}
