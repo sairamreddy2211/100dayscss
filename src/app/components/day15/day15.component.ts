@@ -1,13 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, computed, ElementRef, signal, ViewChild } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+
 @Component({
-  selector: 'app-play',
+  selector: 'app-day15',
   imports: [CommonModule],
-  templateUrl: './play.component.html',
-  styleUrl: './play.component.scss'
+  templateUrl: './day15.component.html',
+  styleUrl: './day15.component.scss'
 })
-export class PlayComponent {
+export class Day15Component  {
 
   fileName = signal("")
   isUploading = signal(false)

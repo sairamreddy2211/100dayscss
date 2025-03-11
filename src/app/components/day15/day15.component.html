@@ -1,0 +1,19 @@
+<div class="frame overflow-hidden relative flex justify-center items-center">
+    <div class="w-[80%] h-[70%] bg-white rounded-sm relative" >
+      <div class="p-4 flex justify-center items-center header"><p>Drop Files To Upload</p></div>
+      <div [class]="'h-[100px] w-[100px] m-auto content relative overflow-hidden '+((isdone() || isUploading()) ? 'hideb':'')">
+        <input #uploader type="file" placeholder="'d'" class="w-full h-full" (change)="handleupload($event)">
+        @if (!fileName()) {
+          <img src="https://100dayscss.com/codepen/upload.svg" alt="" srcset="">
+        }@else {
+          <!-- {{isUploading()}}{{isdone()}} -->
+          <span *ngIf="!isUploading() && !isdone()">{{fileName()}}</span>
+          <img [class]="'initial'+(isUploading() ? 'final rotater':'')" src="https://100dayscss.com/codepen/syncing.svg" alt="" srcset="">
+          <img [class]="'initial '+(isdone() ? 'final':'')" src="https://100dayscss.com/codepen/checkmark.svg" alt="" srcset="">
+          
+        }
+      </div>
+      <button (click)="handleclick()">{{BtnStatus()}}</button>
+    </div>
+  </div>
+  
