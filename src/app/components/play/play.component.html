@@ -1,18 +1,25 @@
 <div class="frameplay overflow-hidden relative flex justify-center items-center">
-  <div class="w-[80%] h-[70%] bg-white rounded-sm relative" >
-    <div class="p-4 flex justify-center items-center header"><p>Drop Files To Upload</p></div>
-    <div [class]="'h-[100px] w-[100px] m-auto content relative overflow-hidden '+((isdone() || isUploading()) ? 'hideb':'')">
-      <input #uploader type="file" placeholder="'d'" class="w-full h-full" (change)="handleupload($event)">
-      @if (!fileName()) {
-        <img src="https://100dayscss.com/codepen/upload.svg" alt="" srcset="">
-      }@else {
-        <!-- {{isUploading()}}{{isdone()}} -->
-        <span *ngIf="!isUploading() && !isdone()">{{fileName()}}</span>
-        <img [class]="'initial'+(isUploading() ? 'final rotater':'')" src="https://100dayscss.com/codepen/syncing.svg" alt="" srcset="">
-        <img [class]="'initial '+(isdone() ? 'final':'')" src="https://100dayscss.com/codepen/checkmark.svg" alt="" srcset="">
-        
-      }
-    </div>
-    <button (click)="handleclick()">{{BtnStatus()}}</button>
+  <div class="blob"></div>
+  <div class="blobSpark"></div>
+  <svg class="polygon">
+    <polygon points="30,0 70,0 100,30 100,70 70,100 30,100 0,70 0,30" fill="white" />
+  </svg>
+  <svg class="triangle">
+    <polygon points="53,0 106,90 0,90" fill="white" />
+  </svg>
+  <div class="oct_spark">
+    <div class="spark s1"></div>
+    <div class="spark s2"></div>
+    <div class="spark s3"></div>
+    <div class="spark s4"></div>
+    <div class="spark s5"></div>
+    <div class="spark s6"></div>
+    <div class="spark s7"></div>
+    <div class="spark s8"></div>
+  </div>
+  <div class="triangle_spark">
+    <div class="spark s1"></div>
+    <div class="spark s2"></div>
+    <div class="spark s3"></div>
   </div>
 </div>
